@@ -8,7 +8,7 @@
   <packaging>pom</packaging>
   <name>Main Street Hub parent pom</name>
   <description>The parent pom for all Main Street Hub projects.</description>
-  <url>https://github.com/mainstreethub/parent-poms</url>
+  <url>https://github.com/mainstreethub/parent-pom</url>
 
   <licenses>
     <license>
@@ -27,9 +27,9 @@
   </developers>
 
   <scm>
-    <url>https://github.com/mainstreethub/parent-poms</url>
-    <connection>scm:git:git@github.com:mainstreethub/parent-poms</connection>
-    <developerConnection>scm:git:git@github.com:mainstreethub/parent-poms</developerConnection>
+    <url>https://github.com/mainstreethub/parent-pom</url>
+    <connection>scm:git:git@github.com:mainstreethub/parent-pom</connection>
+    <developerConnection>scm:git:git@github.com:mainstreethub/parent-pom</developerConnection>
     <tag>HEAD</tag>
   </scm>
 
@@ -369,7 +369,7 @@
               <goal>perform</goal>
             </goals>
             <configuration>
-              <pomFileName>parent-pom/pom.xml</pomFileName>
+              <pomFileName>pom.xml</pomFileName>
             </configuration>
           </execution>
         </executions>
