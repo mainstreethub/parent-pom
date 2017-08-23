@@ -26,6 +26,13 @@
     </developer>
   </developers>
 
+  <scm>
+    <url>https://github.com/mainstreethub/parent-pom</url>
+    <connection>scm:git:git@github.com:mainstreethub/parent-pom</connection>
+    <developerConnection>scm:git:git@github.com:mainstreethub/parent-pom</developerConnection>
+    <tag>HEAD</tag>
+  </scm>
+
   <properties>
     <!-- All code/reports are in UTF-8 -->
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
