@@ -40,6 +40,12 @@
 
     <!-- The minimum java version, children can override this if necessary. -->
     <java.minimum.version>11</java.minimum.version>
+
+    <!-- BEGIN Required for IntelliJ -->
+    <maven.compiler.source>${java.minimum.version}</maven.compiler.source>
+    <maven.compiler.target>${java.minimum.version}</maven.compiler.target>
+    <!-- END Required for IntelliJ -->
+
     <maven.minimum.version>3.5.4</maven.minimum.version>
 
     <maven.checkstyle.plugin.version>2.17</maven.checkstyle.plugin.version>
