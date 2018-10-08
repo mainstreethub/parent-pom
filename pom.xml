@@ -43,6 +43,7 @@
     <maven.minimum.version>3.5.4</maven.minimum.version>
 
     <maven.checkstyle.plugin.version>2.17</maven.checkstyle.plugin.version>
+    <maven.compiler.plugin.version>3.8.0</maven.compiler.plugin.version>
     <maven.enforcer.plugin.version>3.0.0-M2</maven.enforcer.plugin.version>
     <maven.release.plugin.version>2.5.3</maven.release.plugin.version>
   </properties>
@@ -122,7 +123,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.8.0</version>
+          <version>${maven.compiler.plugin.version}</version>
           <configuration>
             <release>${java.minimum.version}</release>
             <compilerArgs>
@@ -160,6 +161,7 @@
           <version>${maven.checkstyle.plugin.version}</version>
           <configuration>
             <sourceDirectory>${project.build.sourceDirectory}</sourceDirectory>
+            <excludes>${project.build.directory}</excludes>
             <includeTestSourceDirectory>true</includeTestSourceDirectory>
             <checkstyleRules>
               <!--
@@ -369,7 +371,7 @@
       <extension>
         <groupId>com.mainstreethub.build</groupId>
         <artifactId>aws-maven</artifactId>
-        <version>5.0.0.RELEASE.MSH.1</version>
+        <version>5.0.0.RELEASE.MSH.2-SNAPSHOT</version>
       </extension>
     </extensions>
   </build>
