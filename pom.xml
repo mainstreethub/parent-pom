@@ -42,22 +42,27 @@
     <java.minimum.version>1.8</java.minimum.version>
   </properties>
 
-  <!-- This configures the publication of jars to the S3 bucket by default. -->
+  <!-- This configures the publication of jars to GoDaddy Artifactory by default. -->
   <distributionManagement>
     <repository>
-      <id>maven-s3-release-repo</id>
-      <name>S3 Release Repository</name>
-      <url>s3://artifacts.mainstreethub.com/maven/releases</url>
+      <id>artifactory.secureserver</id>
+      <name>Artifactory</name>
+      <url>https://artifactory.secureserver.net/artifactory/maven-mainstreethub-prod-local</url>
     </repository>
     <snapshotRepository>
-      <id>maven-s3-snapshot-repo</id>
-      <name>S3 Snapshot Repository</name>
-      <url>s3://artifacts.mainstreethub.com/maven/snapshots</url>
+      <id>artifactory.secureserver</id>
+      <name>Artifactory</name>
+      <url>https://artifactory.secureserver.net/artifactory/maven-mainstreethub-prod-local</url>
     </snapshotRepository>
   </distributionManagement>
 
   <!-- This configures the reading of jars from the S3 bucket. -->
   <repositories>
+    <repository>
+      <id>artifactory.mirror</id>
+      <name>Artifactory Maven Central Mirror</name>
+      <url>https://artifactory.secureserver.net/artifactory/java-virt</url>
+    </repository>
     <repository>
       <id>maven-s3-release-repo</id>
       <name>S3 Release Repository</name>
@@ -358,15 +363,6 @@
         <artifactId>maven-enforcer-plugin</artifactId>
       </plugin>
     </plugins>
-
-    <extensions>
-      <!-- Publish everything to S3 instead of a maven repo. -->
-      <extension>
-        <groupId>com.mainstreethub.build</groupId>
-        <artifactId>aws-maven</artifactId>
-        <version>5.0.0.RELEASE.MSH.1</version>
-      </extension>
-    </extensions>
   </build>
 
   <profiles>
