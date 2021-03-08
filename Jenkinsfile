@@ -9,5 +9,5 @@ def notifier = new Notifier([
 new Pipeline(this)
   .run([
     notifier: notifier,
-    isOpenSource: true
+    isOpenSource: false
   ])
