@@ -363,6 +363,15 @@
         <artifactId>maven-enforcer-plugin</artifactId>
       </plugin>
     </plugins>
+
+    <extensions>
+      <!-- Publish everything to S3 instead of a maven repo. -->
+      <extension>
+        <groupId>com.mainstreethub.build</groupId>
+        <artifactId>aws-maven</artifactId>
+        <version>5.0.0.RELEASE.MSH.1</version>
+      </extension>
+    </extensions>
   </build>
 
   <profiles>
